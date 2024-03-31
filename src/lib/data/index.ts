@@ -78,7 +78,10 @@ export const getCart = cache(async function (cartId: string) {
 
   return medusaClient.carts
     .retrieve(cartId, headers)
-    .then(({ cart }) => cart)
+    .then(({ cart }) => {
+      // console.log(cart)
+      return cart
+    })
     .catch((err) => {
       console.log(err)
       return null
@@ -490,6 +493,7 @@ export const getProductsList = cache(async function ({
     })
 
   const transformedProducts = products.map((product) => {
+    // console.log("This is product", product)
     return transformProductPreview(product, region!)
   })
 

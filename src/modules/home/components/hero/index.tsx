@@ -1,25 +1,25 @@
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
-
+// absolute inset-0 z-10
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
+    <div className="h-[200px] w-full bg-[#e6af2e]  relative  flex flex-col justify-center items-center">
+      <div className=" flex flex-col justify-center items-center text-center small:p-4 gap-6 ">
         <span>
           <Heading
             level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
+            className="text-3xl leading-10 text-white font-normal"
           >
-            Ecommerce Starter Template
+            Shop all 365 days with great Deals
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            className="text-3xl leading-10 text-white font-normal"
           >
-            Powered by Medusa and Next.js
+            Powered up on all 365 days
           </Heading>
         </span>
-        <a
+        {/* <a
           href="https://github.com/medusajs/nextjs-starter-medusa"
           target="_blank"
         >
@@ -27,7 +27,7 @@ const Hero = () => {
             View on GitHub
             <Github />
           </Button>
-        </a>
+        </a> */}
       </div>
     </div>
   )

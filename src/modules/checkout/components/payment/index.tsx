@@ -100,8 +100,8 @@ const Payment = ({
   }, [isOpen])
 
   return (
-    <div className="bg-white">
-      <div className="flex flex-row items-center justify-between mb-6">
+    <div className="bg-white rounded-rounded p-5">
+      <div className="flex flex-row items-center justify-between mb-6 rounded-rounded">
         <Heading
           level="h2"
           className={clx(

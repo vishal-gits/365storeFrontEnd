@@ -27,7 +27,11 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
           {({ open, close }) => (
             <>
               <div className="relative flex h-full">
-                <Popover.Button className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
+                <Popover.Button
+                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none 
+                
+                hover:text-[#e6af2e] hover:font-bold text-base"
+                >
                   Menu
                 </Popover.Button>
               </div>
@@ -42,8 +46,8 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                 leaveFrom="opacity-100 backdrop-blur-2xl"
                 leaveTo="opacity-0"
               >
-                <Popover.Panel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl">
-                  <div className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between p-6">
+                <Popover.Panel className="flex flex-col absolute  pr-4 sm:pr-0 sm:w-1/5 w-1/2 h-auto z-30 inset-x-0 text-sm text-[#000080] m-2 backdrop-blur-2xl border-[1rem] border-[#e6af2e] rounded-rounded">
+                  <div className="flex flex-col h-full bg-white rounded-rounded justify-between p-6">
                     <div className="flex justify-end" id="xmark">
                       <button onClick={close}>
                         <XMark />
@@ -64,7 +68,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         )
                       })}
                     </ul>
-                    <div className="flex flex-col gap-y-6">
+                    {/* <div className="flex flex-col gap-y-6">
                       <div
                         className="flex justify-between"
                         onMouseEnter={toggleState.open}
@@ -87,7 +91,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         © {new Date().getFullYear()} Medusa Store. All rights
                         reserved.
                       </Text>
-                    </div>
+                    </div> */}
                   </div>
                 </Popover.Panel>
               </Transition>
@@ -100,3 +104,5 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
 }
 
 export default SideMenu
+
+// sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] w-full
