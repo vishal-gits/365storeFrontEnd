@@ -47,7 +47,7 @@ const getMedusaHeaders = (tags: string[] = []) => {
   if (token) {
     headers.authorization = `Bearer ${token}`
   }
-
+  // console.log(headers, "---from create headers")
   return headers
 }
 

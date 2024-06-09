@@ -10,7 +10,14 @@ export default async function FeaturedProducts({
   collections: ProductCollectionWithPreviews[]
   region: Region
 }) {
-  return collections.map((collection) => (
+  // console.log(collections)
+
+  const sortedCollections = collections
+    .sort((a, b) => (b.products.length > a.products.length ? 1 : -1))
+    .slice(0, 3)
+  // console.log(sortedCollections)
+
+  return sortedCollections.map((collection) => (
     <li key={collection.id}>
       <ProductRail collection={collection} region={region} />
     </li>

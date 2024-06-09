@@ -9,6 +9,11 @@ type ShippingDetailsProps = {
 }
 
 const ShippingDetails = ({ order }: ShippingDetailsProps) => {
+  console.log(
+    order.shipping_methods[0]?.shipping_option,
+    "-----from order template"
+  )
+  console.log(order.shipping_methods[0], "-----from order template")
   return (
     <div>
       <Heading level="h2" className="flex flex-row text-3xl-regular my-6">
