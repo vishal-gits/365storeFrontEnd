@@ -2,6 +2,8 @@
 
 This is a NextJS front end of a ecommerce website 365store , it is based on MedusaJS backend .
 
+A walkthrough of the project is on https://vimeo.com/982517729
+
 The backend code is at https://github.com/vishal-gits/365storeBackEnd
 
 Algolia has been used for search API
